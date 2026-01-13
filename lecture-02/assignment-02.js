@@ -1,4 +1,4 @@
-// Assignment-01 -> Even/Odd number
+// Assignment-02 -> Even/Odd number
 
 for(let i = 1; i <= 20; i++) {
     console.log(i);
