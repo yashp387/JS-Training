@@ -6,7 +6,7 @@ const slug = words.join("-"); // "react-node"
 
 console.log(words);
 
-const names = "Dhruvil Test ABCD XYZ";
+const names = "yash Test ABCD XYZ";
 
 console.log(names.split(" "));
 
@@ -99,8 +99,8 @@ console.log(user2.name, user1.name);
 // Verify that the original user is unchanged.
 
 const user = {
-  name: "Dhruvil",
-  email: "dhruvil.gajjar@bacancy.com",
+  name: "yash",
+  email: "yash.prajapati@bacancy.com",
   settings: {
     theme: "light",
   },
