@@ -13,7 +13,7 @@ const inputArray = [
   { id: "b2", name: "Bob" },
 ];
 
-const obj = inputArray.reduce((acc, user) => {
+const lookup = inputArray.reduce((acc, user) => {
   return {
     ...acc,
     [user.id]: {
@@ -22,7 +22,7 @@ const obj = inputArray.reduce((acc, user) => {
   };
 }, {});
 
-obj.updateName = function (id, newName) {
+lookup.updateName = function (id, newName) {
   if (this[id]) {
     this[id].name = newName;
     console.log(`Updated ${id} to ${newName}`);
@@ -31,7 +31,7 @@ obj.updateName = function (id, newName) {
   }
 };
 
-obj.updateName("a1", "yash");
+lookup.updateName("a1", "yash");
 
-console.log(obj["a1"]);
+console.log(lookup["a1"]);
 console.log(inputArray[0]);
