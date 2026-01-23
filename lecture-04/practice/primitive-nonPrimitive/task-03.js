@@ -18,7 +18,7 @@ const updateTheme = (currentState) => {
     settings: {
       ...currentState.settings,
       theme: {
-        ...currentState.theme,
+        ...currentState.settings.theme,
         isDark: true,
       },
     },
