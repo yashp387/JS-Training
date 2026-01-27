@@ -1,6 +1,6 @@
 // Assignment-01 -> Number check
 
-let x = 0;
+const x = 11;
 
 if(x > 0) {
     console.log('positive number');

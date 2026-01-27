@@ -1,6 +1,6 @@
 // Assignment-03 -> Role access using switch case
 
-let role = "ADMIN"
+const role = "ADMIN"
 
 switch (role) {
     case "ADMIN":
