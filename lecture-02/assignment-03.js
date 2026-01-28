@@ -1,6 +1,6 @@
 // Assignment-03 -> Role access using switch case
 
-const role = "ADMIN"
+const role = "USER"
 
 switch (role) {
     case "ADMIN":
@@ -16,3 +16,12 @@ switch (role) {
         console.log("Invalid role");
         break;
 }
+
+
+// second waym to solve using object
+const roles = {
+    "ADMIN" : "full access",
+    "USER" : "Limited access",
+    "MANAGER" : "Moderate access"
+}
+console.log(roles[role] || "Invalid role");
