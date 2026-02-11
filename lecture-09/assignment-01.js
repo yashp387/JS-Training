@@ -10,7 +10,7 @@ btnSave.addEventListener("click", () => {
     // console.log(inputValue);
     localStorage.setItem("name", inputValue);
     sessionStorage.setItem("name", inputValue);
-    saveName.textContent = "Saved: " + inputField.value;
+    saveName.textContent = "Saved: " + inputValue;
 });
 
 btnLoad.addEventListener("click", () => {
