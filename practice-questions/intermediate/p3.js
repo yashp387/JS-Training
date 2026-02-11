@@ -33,10 +33,10 @@ async function fetchData(url) {
         const data = await response.json();
 
         return data
-        .filter(user => user.active === true)
-        .map(user => ({
-            userId: user.id,
-            userName: user.user,
+        .filter(({ active }) => active)
+        .map(({ id, name}) => ({
+            userId: id,
+            userName: name,
         }));
 
     } catch (err) {
