@@ -5,9 +5,7 @@
 
 // ### Exercise 1: Basic setTimeout
 
-
 // **Task:** Create a function that logs numbers 1 to 5, with a 1-second delay between each number.
-
 
 // TODO: Implement countWithDelay function
 // function countWithDelay() {
@@ -22,7 +20,7 @@
 
 // countWithDelay();
 
-// explanation: 
+// explanation:
 // The countWithDelay function contains a for loop with setTimeout, which is used to print numbers from 1 to 5,the delay is calculated as c * 1000 milliseconds, which ensures that the numbers are logged one by one at one-second intervals (1 after 1 second, 2 after 2 seconds, and so on up to 5 after 5 seconds).
 
 /* --------------------------------------------------------------------------------------- */
@@ -36,7 +34,6 @@
 //    console.log(i); // Currently logs: 3, 3, 3
 //  }, 1000);
 // }
-
 
 // TODO: Fix the code above to log 0, 1, 2
 // for(let i = 0; i < 3; i++) {
@@ -55,16 +52,17 @@
 
 // TODO: Implement countdown function
 function countdown(start) {
- // Your code here
- for(let i = 10; i >=0; i--) {
-    setTimeout(() => {
-        console.log(i);
-    }, (10-i)*1000);
- }
- // Should log numbers from start to 0, with 1 second between each
- // Should stop at 0
-}
+  [...Array(start + 1)].forEach((_, index) => {
+    const value = start - index;
 
+    setTimeout(() => {
+      console.log(value);
+    }, index * 1000);
+  });
+
+  // Should log numbers from start to 0, with 1 second between each
+  // Should stop at 0
+}
 
 countdown(10);
 
