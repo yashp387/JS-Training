@@ -9,7 +9,7 @@ Write a function generateTable that efficiently renders a table from an array of
 const btn5 = document.getElementById("btn-5");
 
 function generateTable(data, containerId) {
-  if (!data || data.length === 0) return;
+  if (data?.length === 0) return;
 
   const container = document.getElementById(containerId);
   const table = document.createElement("table");
