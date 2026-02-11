@@ -9,7 +9,7 @@ async function fetchData(url, retries) {
     return await response.json();
   } catch (error) {
     if (retries <= 0) {
-      throw error;
+      throw new Error(`Max retries reached... ${error.message}`);
     }
   }
   return fetchData(url, retries - 1);
