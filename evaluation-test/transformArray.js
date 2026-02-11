@@ -38,19 +38,21 @@ const input = [
 ];
 
 function transform(input) {
-    const map = {};
-    for(const { id, tags} of input) {
-        for(const tag of tags) {
-            if(!map[tag]) {
-                map[tag] = new Set();
-            }
-            map[tag].add(id);
-        }
-    }
-    for(const tag in map) {
-        map[tag] = Array.from(map[tag]).sort((a, b) => a - b);
-    }
-    return map;
+  const tempMap = input.reduce((acc, { id, tags }) => {
+    tags.forEach((tag) => {
+      if (!acc[tag]) {
+        acc[tag] = new Set();
+      }
+      acc[tag].add(id);
+    });
+    return acc;
+  }, {});
+  // console.log(tempMap);
+
+  Object.keys(tempMap).forEach((tag) => {
+    tempMap[tag] = Array.from(tempMap[tag]).sort((a, b) => a - b);
+  });
+  return tempMap;
 }
 
 console.log(transform(input));
