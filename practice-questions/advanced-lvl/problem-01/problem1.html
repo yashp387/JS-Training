@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Shopping Cart</title>
+    <link rel="stylesheet" href="./assests/css/problem1.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Async Shopping Cart</h1>
+      <div class="controls">
+        <input type="text" id="search-input" placeholder="Search products..." />
+      </div>
+    </header>
+
+    <div id="error-container"></div>
+
+    <div class="container">
+      <main class="products-section">
+        <h2>Products</h2>
+        <div class="grid" id="product-list">
+          <p>Loading Products...</p>
+        </div>
+      </main>
+
+      <aside class="cart-section">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button id="clear-cart-btn" class="danger-btn">Clear cart</button>
+        </div>
+
+        <div id="cart-items">
+          <p class="empty-msg">Cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+          <h3>Total: <span id="cart-total">0.00</span></h3>
+        </div>
+      </aside>
+    </div>
+
+    <script src="./assests/scripts/problem1.js"></script>
+  </body>
+</html>
